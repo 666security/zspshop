@@ -1,0 +1,12 @@
+INSERT INTO users (name,surname,login,password)("Oskar","Stawikowski","oskars","oskar1")
+INSERT INTO users (name,surname,login,password)("Pawel","Kozlowski","pawelk","pawel1")
+INSERT INTO users (name,surname,login,password)("Pawel","Lewandowski","pawell","pawel1")
+INSERT INTO users (name,surname,login,password)("Kacper","Kaminski","kacperk","kacper1")
+INSERT INTO users (name,surname,login,password)("Szymon","Stefankiewicz","szymons","szymon1")
+
+
+INSERT INTO shopping (name,description)("","")
+INSERT INTO shopping (name,description)("","")
+INSERT INTO shopping (name,description)("","")
+INSERT INTO shopping (name,description)("","")
+INSERT INTO shopping (name,description)("","")
