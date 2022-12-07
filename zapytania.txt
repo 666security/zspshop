@@ -1,12 +1,33 @@
-INSERT INTO users (name,surname,login,password)("Oskar","Stawikowski","oskars","oskar1")
-INSERT INTO users (name,surname,login,password)("Pawel","Kozlowski","pawelk","pawel1")
-INSERT INTO users (name,surname,login,password)("Pawel","Lewandowski","pawell","pawel1")
-INSERT INTO users (name,surname,login,password)("Kacper","Kaminski","kacperk","kacper1")
-INSERT INTO users (name,surname,login,password)("Szymon","Stefankiewicz","szymons","szymon1")
+1.zapytanie pozwalajace sprawdzic czy uzytkownik moze sie zalgowac:
+
+SELECT id FROM users WHERE login="'.$_POST['login'].'" AND password="'.$_POST['password'].'"'
+
+2.zapytanie pozwalajace sprawdzic czy uzytkownik moze sie zarejestreowac:
+
+INSERT INTO `users`(`id`, `name`, `surname`, `login`, `password`, `isadmin`) VALUES ('NULL','".$_POST["name"]."','".$_POST["surname"].
+
+3.zapytania pobierające oferty konkretnego użytkownika:
+
+SELECT shopping.name from shopping where id="1"
+SELECT shopping.description from shopping where id="1"
+SELECT shopping.price from shopping where id="1"
+
+4.zapytanie pozwalajace modyfikowanie oferty:
+
+UPDATE shopping SET shopping.name=[""], shopping description=[""] WHERE users_id="1" AND id="1"
+
+5.zapytania pobierające oferty zakupione przez konkretnego użytkownika:
+
+SELECT shopping.user_id, shopping.name, shopping.description From shopping JOIN shopping ON shopping.id where shopping.users_id="1"
+
+6.dodawanie oferty:
+
+INSERT  INTO shopping (name,description,users_id) VALUES ("","","")
+
+7.Niekupione przedmioty
+SELECT shopping.name, shopping.description from shopping WHERE shopping.id NOT IN (SELECT shopping_id FROM shopping);
+
+8.zakup przedmiotu
+INSERT INTO shopping (`id`, `users_id`) VALUES ('5','2');
 
 
-INSERT INTO shopping (name,description)("","")
-INSERT INTO shopping (name,description)("","")
-INSERT INTO shopping (name,description)("","")
-INSERT INTO shopping (name,description)("","")
-INSERT INTO shopping (name,description)("","")
