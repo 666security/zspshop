@@ -26,10 +26,13 @@ for($i=0;$i<count($shopping); $i++){
 
     $res1 = $con->query("SELECT * FROM shopping");
     $cos1 = $res1->fetch_all();
+    $w = null;
     echo '<center> Zalogowany jako: '.$_COOKIE["id"].'<h1>Wystaw:</h1><br> Nazwa Przedmiotu: <input name="name"><br> Opis: <input name="description"><br><input type="submit">';
     if($_POST!=NULL)
     {
-            $sqlquery = "INSERT INTO `shopping` VALUES ('".count($cos1)."', '".$_POST['name']."', '".$_POST['description']."','".$_SESSION["id"]."');";
+        $t = count($cos1);
+            $sqlquery = "INSERT INTO shopping (id, users_id, name, description) VALUES (".$t.", '".$_COOKIE["id"]."', '".$_POST['name']."', '".$_POST['description']."');";
+            echo $sqlquery;
             $con->query($sqlquery);
             header('location: index.php');
     }

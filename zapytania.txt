@@ -10,8 +10,6 @@ INSERT INTO `users`(`id`, `name`, `surname`, `login`, `password`, `isadmin`) VAL
 
 SELECT shopping.name from shopping where id="1"
 SELECT shopping.description from shopping where id="1"
-SELECT shopping.price from shopping where id="1"
-
 4.zapytanie pozwalajace modyfikowanie oferty:
 
 UPDATE shopping SET shopping.name=[""], shopping description=[""] WHERE users_id="1" AND id="1"
