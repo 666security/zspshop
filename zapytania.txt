@@ -11,6 +11,9 @@ SELECT shopping.description from shopping where id="1"
 4.zapytanie pozwalajace modyfikowanie oferty:
 UPDATE shopping SET name="test",description="test" WHERE users_id="4" AND id="1"
 
+5. zapytanie pobierajace konkrety oferty
+SELECT name, description FROM shopping WHERE id="1"
+
 5.zapytania pobierające oferty zakupione przez konkretnego użytkownika:
 SELECT name,description From shopping WHERE buyer_id="1";
 
