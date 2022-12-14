@@ -14,7 +14,7 @@ $sql="select * from shopping";
 $res= $con->query($sql);
 $shopping= $res->fetch_all(MYSQLI_ASSOC);
 for($i=0;$i<count($shopping); $i++){
-    echo $shopping[$i]["offers"]." - ".$shopping[$i]["prices"]." <a href='szczegolyofert.php?offer_id=".$shopping[$i]["id"]."'>Edytuj</a><br>";
+    echo $shopping[$i]["name"]." - ".$shopping[$i]["description"]." <a href='oferty.php?offer_id=".$shopping[$i]["id"]."'>Edytuj</a><br>";
 }
 ?>
 <?php
